@@ -4,8 +4,10 @@ Title: Radii Plots for ggplot
 Version: 0.1.0
 Author: c(person("Matt","Moramarco","moramarco@gmail.com", c("aut","cre")))
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: Plots wind radii charts on ggmap
+Description: Plots wind radii charts on ggmap object.
 License: CC0
+Imports: ggplot2, dplyr, tidyr
+Depends: R (>= 2.10)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1

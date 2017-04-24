@@ -8,6 +8,23 @@ geom_hurricane(mapping = NULL, data = NULL, stat = "identity",
   position = "identity", na.rm = FALSE, show.legend = NA,
   inherit.aes = TRUE, ...)
 }
+\arguments{
+\item{mapping}{mapping}
+
+\item{data}{data}
+
+\item{stat}{stat}
+
+\item{position}{position}
+
+\item{na.rm}{na.rm}
+
+\item{show.legend}{show.legend}
+
+\item{inherit.aes}{inherit.aes}
+
+\item{...}{other}
+}
 \description{
 Generates a radii plot on a ggmap object representing the maximum windspeed
 }

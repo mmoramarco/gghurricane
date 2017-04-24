@@ -80,6 +80,14 @@ GeomHurricane <- ggproto("GeomHurricane", Geom,
 #' @title geom_hurricane
 #' @description
 #' Generates a radii plot on a ggmap object representing the maximum windspeed
+#' @param mapping mapping
+#' @param data data
+#' @param stat stat
+#' @param position position
+#' @param na.rm na.rm
+#' @param show.legend show.legend
+#' @param inherit.aes inherit.aes
+#' @param ... other
 #' @examples
 #' \dontrun{
 #' get_map("Louisiana", zoom = 6, maptype = "toner-background", source="stamen",force=FALSE) %>%
