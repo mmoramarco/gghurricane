@@ -16,9 +16,11 @@
 #' @importFrom tidyr gather
 #' @importFrom grid polygonGrob
 #' @importFrom grid gpar
+#' @importFrom geosphere destPoint
+#'
 #'
 #' @export
-GeomHurricane <- ggproto("GeomHurricane", Geom,
+GeomHurricane <- ggplot2::ggproto("GeomHurricane", Geom,
                          required_aes = c("x","y","r_ne","r_se","r_nw","r_sw"),
                          default_aes = aes(scale_radii=1.0,
                                            alpha=0.75),
@@ -80,14 +82,8 @@ GeomHurricane <- ggproto("GeomHurricane", Geom,
 #' @title geom_hurricane
 #' @description
 #' Generates a radii plot on a ggmap object representing the maximum windspeed
-#' @param mapping mapping
-#' @param data data
-#' @param stat stat
-#' @param position position
-#' @param na.rm na.rm
-#' @param show.legend show.legend
-#' @param inherit.aes inherit.aes
-#' @param ... other
+#' @inheritParams ggplot2::geom_polygon
+#' @param scale_radii Numeric value to adjust scale of the radii plot.
 #' @examples
 #' \dontrun{
 #' get_map("Louisiana", zoom = 6, maptype = "toner-background", source="stamen",force=FALSE) %>%
@@ -107,7 +103,7 @@ GeomHurricane <- ggproto("GeomHurricane", Geom,
 #' @export
 geom_hurricane <- function(mapping = NULL, data = NULL, stat = "identity",
                            position = "identity", na.rm = FALSE, show.legend = NA,
-                           inherit.aes = TRUE, ...) {
+                           inherit.aes = TRUE, scale_radii = 1.0, ...) {
   layer(
     geom = GeomHurricane, mapping = mapping,  data = data, stat = stat,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
